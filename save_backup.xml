@@ -1,0 +1,26 @@
+<xml version="1.0">
+<dashboard>
+	<widget field="Value4" type="Number" class="team2485.smartdashboard.extension.AirTankWidget">
+		<location x="242" y="498"/>
+	</widget>
+	<widget field="Value1" type="Number" class="team2485.smartdashboard.extension.AirTankWidget">
+		<location x="246" y="351"/>
+	</widget>
+	<widget field="Value5" type="Number" class="team2485.smartdashboard.extension.AirTankWidget">
+		<location x="246" y="227"/>
+	</widget>
+	<widget field="Potentiometer Average Value" type="Number" class="team2485.smartdashboard.extension.ArmPot">
+		<location x="595" y="402"/>
+		<property name="Potentiometer Offset" value="45"/>
+		<property name="Smoothing Factor" value="1"/>
+	</widget>
+	<widget field="Value3" type="Number" class="team2485.smartdashboard.extension.BatteryWidget">
+		<location x="1073" y="385"/>
+	</widget>
+	<static-widget class="team2485.smartdashboard.extension.Background">
+		<location x="3" y="0"/>
+	</static-widget>
+</dashboard>
+<live-window>
+</live-window>
+</xml>
