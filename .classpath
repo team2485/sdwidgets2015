@@ -7,8 +7,6 @@
 	<classpathentry kind="lib" path="lib/javacpp.jar"/>
 	<classpathentry kind="lib" path="lib/javacv-windows-x86_64.jar"/>
 	<classpathentry kind="lib" path="lib/javacv.jar"/>
-	<classpathentry kind="lib" path="lib/jinput-dx8_64.dll"/>
-	<classpathentry kind="lib" path="lib/jinput-raw_64.dll"/>
 	<classpathentry kind="lib" path="lib/jinput.jar"/>
 	<classpathentry kind="lib" path="lib/JNativeHook.jar"/>
 	<classpathentry kind="lib" path="lib/networktables-desktop.jar"/>
