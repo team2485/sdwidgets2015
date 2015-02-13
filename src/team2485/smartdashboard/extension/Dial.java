@@ -15,6 +15,7 @@ import edu.wpi.first.smartdashboard.properties.BooleanProperty;
 import edu.wpi.first.smartdashboard.properties.DoubleProperty;
 import edu.wpi.first.smartdashboard.properties.IntegerProperty;
 import edu.wpi.first.smartdashboard.properties.Property;
+import edu.wpi.first.smartdashboard.properties.StringProperty;
 import edu.wpi.first.smartdashboard.types.DataType;
 
 public class Dial extends Widget {
@@ -27,10 +28,12 @@ public class Dial extends Widget {
     
     int scaling;
 	private BufferedImage backgroundImg;
-	DoubleProperty  SizeMultiplier = new DoubleProperty (this, "Size", 6);
+	DoubleProperty  SizeMultiplier = new DoubleProperty (this, "Size Multiplier", 6);
 	DoubleProperty  Devitation     = new DoubleProperty (this, "Devitation", 5);
+	IntegerProperty  Multiplier    = new IntegerProperty (this, "Multiplier", 1);
 	IntegerProperty Range          = new IntegerProperty(this, "Range", 25);
 	BooleanProperty Test		   = new BooleanProperty(this, "Test", false);
+	StringProperty Units		   = new StringProperty(this, "Units", "IPS");
 	
 	@Override
 	public void init() {
@@ -91,14 +94,15 @@ public class Dial extends Widget {
 		Graphics2D gg = (Graphics2D) g;
 		Font font = new Font("BOOMBOX", Font.BOLD, (scaling / 16));
 		gg.setFont(font);
-		gg.setColor(Color.YELLOW);
+		gg.setColor(new Color(228, 192, 37));
 		gg.drawImage(backgroundImg, 0, 0,scaling,scaling*backgroundImg.getHeight()/backgroundImg.getWidth(), null);
 		gg.translate(scaling / 2, (int) scaling * .475);
 		gg.rotate(Math.toRadians(degrees));
-		gg.fillRect((int)(-scaling*.02), (int)(-scaling*.39), (int)(scaling*.01), (int)(scaling*.41));
+		gg.fillRect((int)(-scaling*.02), (int)(-scaling*.36), (int)(scaling*.01), (int)(scaling*.38));
 		gg.rotate(Math.toRadians(-degrees));
 		gg.setColor(Color.GREEN);
 		for (int i = 0; i <= Range.getValue(); i += Devitation.getValue()) {
+			
 			double x = Math.cos(Math.toRadians(i * SizeMultiplier.getValue() - 180));
 			double y = Math.sin(Math.toRadians(i * SizeMultiplier.getValue() - 180));
 			gg.drawString(
@@ -108,7 +112,8 @@ public class Dial extends Widget {
 			
 			gg.fillOval((int) (x*scaling*.25), (int) (y*scaling*.25), 2, 2);
 		}
-		gg.drawString("" + val, scaling/2, scaling*5/6);
+		gg.setFont(new Font("Ubuntu", Font.PLAIN, (scaling / 25)));
+		gg.drawString("" + (int)val + "  " + Units.getValue() + " x " + Multiplier.getValue(), -scaling*1/10, +scaling/6);
 		gg.translate(-scaling / 2, -scaling / 2);
 		//gg.drawString("" + value, 20, 20);
 	}

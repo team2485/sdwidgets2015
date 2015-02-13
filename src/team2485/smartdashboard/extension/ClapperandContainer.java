@@ -27,7 +27,6 @@ public class ClapperandContainer extends Widget {
     public static final DataType[] TYPES = {DataType.STRING};
 
 
-    Property smoothingfactor = new IntegerProperty(this, "Smoothing Factor", 5);
     Property Test = new BooleanProperty(this, "Test", false);
 
     private BufferedImage containerArm, clapper, strongBack, base;

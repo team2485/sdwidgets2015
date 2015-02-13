@@ -101,17 +101,17 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="-78.66756"
+     inkscape:cx="-69.32365"
      inkscape:cy="160.76224"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      width="200px"
-     inkscape:window-width="1680"
-     inkscape:window-height="1027"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-width="831"
+     inkscape:window-height="423"
+     inkscape:window-x="876"
+     inkscape:window-y="202"
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -136,16 +136,16 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="csssc"
        inkscape:export-filename="C:\Users\Aidan\Documents\GitHub\sdwidgets2015\src\team2485\smartdashboard\extension\res\Dial.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
+       inkscape:export-xdpi="200.15793"
+       inkscape:export-ydpi="200.15793" />
     <path
        style="fill:none;stroke:#000000;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter3921)"
        d="m 31.001632,1019.4422 c 0,0 -16.544837,-16.5661 -17,-50.00004 -0.731834,-53.75681 46.260505,-85.61715 85.999998,-85.168 40.8351,0.46154 85.44422,29.95905 86,85.168 0.34095,33.86794 -16.26752,51.01274 -16.26752,51.01274"
        id="path3827"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="csssc"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="200.15793"
+       inkscape:export-ydpi="200.15793"
        inkscape:export-filename="C:\Users\Aidan\Documents\GitHub\sdwidgets2015\src\team2485\smartdashboard\extension\res\Dial.png" />
   </g>
 </svg>
