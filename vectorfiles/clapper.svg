@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024px"
+   height="768px"
+   id="svg3006"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="clapper.svg"
+   inkscape:export-filename="C:\Users\Aidan\Documents\GitHub\sdwidgets2015\src\team2485\smartdashboard\extension\res\clapper.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs3008">
+    <marker
+       inkscape:stockid="TriangleInL"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleInL"
+       style="overflow:visible">
+      <path
+         id="path3951"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(-0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleInM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleInM"
+       style="overflow:visible">
+      <path
+         id="path3954"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(-0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         id="path3818"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <filter
+       inkscape:label="Glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Glow of object's own color at the edges"
+       color-interpolation-filters="sRGB"
+       id="filter3866">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="result91"
+         id="feGaussianBlur3868" />
+      <feComposite
+         in="SourceGraphic"
+         operator="over"
+         in2="result91"
+         id="feComposite3870" />
+    </filter>
+    <filter
+       inkscape:label="Glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Glow of object's own color at the edges"
+       color-interpolation-filters="sRGB"
+       id="filter3872">
+      <feGaussianBlur
+         stdDeviation="7.2000000000000002"
+         result="result91"
+         id="feGaussianBlur3874" />
+      <feComposite
+         in="SourceGraphic"
+         operator="over"
+         in2="result91"
+         id="feComposite3876" />
+    </filter>
+    <filter
+       inkscape:label="Glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Glow of object's own color at the edges"
+       color-interpolation-filters="sRGB"
+       id="filter4347">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="result91"
+         id="feGaussianBlur4349" />
+      <feComposite
+         in="SourceGraphic"
+         operator="over"
+         in2="result91"
+         id="feComposite4351" />
+    </filter>
+    <filter
+       inkscape:label="Glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Glow of object's own color at the edges"
+       color-interpolation-filters="sRGB"
+       id="filter4359">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="result91"
+         id="feGaussianBlur4361" />
+      <feComposite
+         in="SourceGraphic"
+         operator="over"
+         in2="result91"
+         id="feComposite4363" />
+    </filter>
+    <filter
+       inkscape:label="Glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Glow of object's own color at the edges"
+       color-interpolation-filters="sRGB"
+       id="filter4365">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="result91"
+         id="feGaussianBlur4367" />
+      <feComposite
+         in="SourceGraphic"
+         operator="over"
+         in2="result91"
+         id="feComposite4369" />
+    </filter>
+    <filter
+       inkscape:label="Glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Glow of object's own color at the edges"
+       color-interpolation-filters="sRGB"
+       id="filter4371">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="result91"
+         id="feGaussianBlur4373" />
+      <feComposite
+         in="SourceGraphic"
+         operator="over"
+         in2="result91"
+         id="feComposite4375" />
+    </filter>
+    <filter
+       inkscape:label="Glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Glow of object's own color at the edges"
+       color-interpolation-filters="sRGB"
+       id="filter4353">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="result91"
+         id="feGaussianBlur4355" />
+      <feComposite
+         in="SourceGraphic"
+         operator="over"
+         in2="result91"
+         id="feComposite4357" />
+    </filter>
+    <filter
+       inkscape:label="Glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Glow of object's own color at the edges"
+       color-interpolation-filters="sRGB"
+       id="filter3790">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="result91"
+         id="feGaussianBlur3792" />
+      <feComposite
+         in="SourceGraphic"
+         operator="over"
+         in2="result91"
+         id="feComposite3794" />
+    </filter>
+    <filter
+       inkscape:label="Glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Glow of object's own color at the edges"
+       color-interpolation-filters="sRGB"
+       id="filter3817">
+      <feGaussianBlur
+         stdDeviation="1.8062275449101797"
+         result="result91"
+         id="feGaussianBlur3819" />
+      <feComposite
+         in="SourceGraphic"
+         operator="over"
+         in2="result91"
+         id="feComposite3821" />
+    </filter>
+    <filter
+       inkscape:label="Glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Glow of object's own color at the edges"
+       color-interpolation-filters="sRGB"
+       id="filter3790-3">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="result91"
+         id="feGaussianBlur3792-9" />
+      <feComposite
+         in="SourceGraphic"
+         operator="over"
+         in2="result91"
+         id="feComposite3794-1" />
+    </filter>
+    <filter
+       inkscape:label="Glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Glow of object's own color at the edges"
+       color-interpolation-filters="sRGB"
+       id="filter3790-4">
+      <feGaussianBlur
+         stdDeviation="1.8"
+         result="result91"
+         id="feGaussianBlur3792-95" />
+      <feComposite
+         in="SourceGraphic"
+         operator="over"
+         in2="result91"
+         id="feComposite3794-3" />
+    </filter>
+    <filter
+       id="filter3842"
+       inkscape:label="Glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Glow of object's own color at the edges"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur3844"
+         stdDeviation="1.6000000000000001"
+         result="result91" />
+      <feComposite
+         id="feComposite3846"
+         in2="result91"
+         in="SourceGraphic"
+         operator="over" />
+    </filter>
+    <filter
+       inkscape:label="Glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Glow of object's own color at the edges"
+       color-interpolation-filters="sRGB"
+       id="filter3790-4-3">
+      <feGaussianBlur
+         stdDeviation="1.8"
+         result="result91"
+         id="feGaussianBlur3792-95-1" />
+      <feComposite
+         in="SourceGraphic"
+         operator="over"
+         in2="result91"
+         id="feComposite3794-3-9" />
+    </filter>
+    <filter
+       inkscape:label="Glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Glow of object's own color at the edges"
+       color-interpolation-filters="sRGB"
+       id="filter3790-4-3-9">
+      <feGaussianBlur
+         stdDeviation="1.8"
+         result="result91"
+         id="feGaussianBlur3792-95-1-5" />
+      <feComposite
+         in="SourceGraphic"
+         operator="over"
+         in2="result91"
+         id="feComposite3794-3-9-1" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.83278397"
+     inkscape:cx="825.69172"
+     inkscape:cy="264.96435"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="745"
+     inkscape:window-x="1672"
+     inkscape:window-y="274"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata3011">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#e4c025;stroke-width:1.88999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0;stroke-dasharray:none"
+       d="m 319.63313,691.2142 298.72813,-0.8005 0,49.1726 -54.6559,0 -15.8571,-18.36326 -250.12214,0 -180.22593,0 -14.79168,18.36326 -62.569769,0 0,-48.3721 249.187449,0 z"
+       id="path3020-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccc"
+       inkscape:export-filename="C:\Users\Aidan\Documents\GitHub\sdwidgets2015\src\team2485\smartdashboard\extension\res\base.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#e4c025;stroke-width:7.47907925;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter3872)"
+       d="m -62.05317,644.61708 1212.98127,0 0,-99.24691 -494.91953,0 -629.807456,-515.029581 -88.254284,0 -0.504931,58.17728 88.759215,0 78.742776,63.294511 8.9e-4,393.55779 c -55.698519,-0.0608 -111.3968055,0.0602 -167.095179,0.16296 z m 203.65419,-463.33921 452.95621,364.0923 -452.95705,0 z"
+       id="path3022-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccccc"
+       transform="matrix(0.25270491,0,0,0.25270491,73.171437,59.76303)"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="C:\Users\Aidan\Documents\GitHub\sdwidgets2015\src\team2485\smartdashboard\extension\res\clapper.png" />
+    <g
+       id="g4978"
+       transform="matrix(0.313837,0,0,0.313837,-24.425244,320.95174)"
+       inkscape:export-filename="C:\Users\Aidan\Documents\GitHub\sdwidgets2015\src\team2485\smartdashboard\extension\res\containerArm.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <g
+         style="filter:url(#filter4353)"
+         id="g2991"
+         transform="matrix(1.530589,0,0,1.530589,98.214795,-272.21406)">
+        <path
+           style="fill:none;stroke:#e4c025;stroke-width:3.93465137;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 74.285714,215.21933 0,97.14285 517.142856,0 0,-116.4 -325.71428,0 0,15.814 -191.428576,0 z"
+           id="path2987"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccccc" />
+        <path
+           style="fill:none;stroke:#e4c025;stroke-width:3.93465137;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 265.60698,211.789 0,101.01525"
+           id="path2989"
+           inkscape:connector-curvature="0" />
+      </g>
+      <path
+         transform="matrix(1.3809628,0,0,1.4536451,115.46723,-235.29384)"
+         d="m 364.28573,242.71933 c 0,18.73823 -15.98983,33.92857 -35.71429,33.92857 -19.72445,0 -35.71429,-15.19034 -35.71429,-33.92857 0,-18.73823 15.98984,-33.92857 35.71429,-33.92857 19.72446,0 35.71429,15.19034 35.71429,33.92857 z"
+         sodipodi:ry="33.92857"
+         sodipodi:rx="35.714287"
+         sodipodi:cy="242.71933"
+         sodipodi:cx="328.57144"
+         id="path2995"
+         style="fill:#000000;fill-opacity:0;stroke:#e4c025;stroke-width:4.2505455;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter4371)"
+         sodipodi:type="arc" />
+      <path
+         transform="matrix(1.3809628,0,0,1.4536451,237.91435,-235.29384)"
+         d="m 364.28573,242.71933 c 0,18.73823 -15.98983,33.92857 -35.71429,33.92857 -19.72445,0 -35.71429,-15.19034 -35.71429,-33.92857 0,-18.73823 15.98984,-33.92857 35.71429,-33.92857 19.72446,0 35.71429,15.19034 35.71429,33.92857 z"
+         sodipodi:ry="33.92857"
+         sodipodi:rx="35.714287"
+         sodipodi:cy="242.71933"
+         sodipodi:cx="328.57144"
+         id="path2995-1"
+         style="fill:#000000;fill-opacity:0;stroke:#e4c025;stroke-width:4.2505455;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter4365)"
+         sodipodi:type="arc" />
+      <path
+         transform="matrix(1.3809628,0,0,1.4536451,360.36147,-235.29384)"
+         d="m 364.28573,242.71933 c 0,18.73823 -15.98983,33.92857 -35.71429,33.92857 -19.72445,0 -35.71429,-15.19034 -35.71429,-33.92857 0,-18.73823 15.98984,-33.92857 35.71429,-33.92857 19.72446,0 35.71429,15.19034 35.71429,33.92857 z"
+         sodipodi:ry="33.92857"
+         sodipodi:rx="35.714287"
+         sodipodi:cy="242.71933"
+         sodipodi:cx="328.57144"
+         id="path2995-1-7"
+         style="fill:#000000;fill-opacity:0;stroke:#e4c025;stroke-width:4.2505455;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter4359)"
+         sodipodi:type="arc" />
+      <path
+         transform="matrix(1.3809628,0,0,1.4536451,482.80859,-235.29384)"
+         d="m 364.28573,242.71933 c 0,18.73823 -15.98983,33.92857 -35.71429,33.92857 -19.72445,0 -35.71429,-15.19034 -35.71429,-33.92857 0,-18.73823 15.98984,-33.92857 35.71429,-33.92857 19.72446,0 35.71429,15.19034 35.71429,33.92857 z"
+         sodipodi:ry="33.92857"
+         sodipodi:rx="35.714287"
+         sodipodi:cy="242.71933"
+         sodipodi:cx="328.57144"
+         id="path2995-1-7-4"
+         style="fill:#000000;fill-opacity:0;stroke:#e4c025;stroke-width:4.2505455;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter4347)"
+         sodipodi:type="arc" />
+    </g>
+    <path
+       style="fill:#000000;stroke:#e4c025;stroke-width:4.35623026000000020;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:0;filter:url(#filter3790-4)"
+       d="m 384.7574,798.62415 688.5336,-1.84506 0,113.33713 -125.9755,0 -36.54878,-42.32517 -576.50243,0 -415.399815,0 -34.093095,42.32517 -144.21606,0 0,-111.49207 574.3481,0 z"
+       id="path3020"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccc"
+       transform="matrix(0.43386137,0,0,0.43386137,153.16553,345.60418)"
+       inkscape:export-filename="C:\Users\Aidan\Documents\GitHub\sdwidgets2015\src\team2485\smartdashboard\extension\res\base.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#e4c025;stroke-width:1.88999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter3817)"
+       d="m 262.07209,691.98545 0,-63.06906 -202.900066,0 0,63.29006 m -18.550863,0 0,-79.52206 237.682939,0 0,79.30106"
+       id="path3815"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:export-filename="C:\Users\Aidan\Documents\GitHub\sdwidgets2015\src\team2485\smartdashboard\extension\res\base.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#e4c025;stroke-width:4.35623026;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter3790-3)"
+       d="m 314.90342,798.62415 0,-1255.46554 69.85411,0 0,18.90016 13.76707,0 0,96.96669 -13.7672,0 0,1139.59869"
+       id="path3020-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccc"
+       transform="matrix(0.43386137,0,0,0.43386137,602.37331,257.57369)"
+       inkscape:export-filename="C:\Users\Aidan\Documents\GitHub\sdwidgets2015\src\team2485\smartdashboard\extension\res\strongBack.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#00f669;stroke-width:1.88999999000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.97426471000000003;stroke-dasharray:none;filter:url(#filter3790-4)"
+       d="m 567.016,372 82.73187,0 0,20 -82.73149,0 0,20 -24.77638,-30 24.776,-30 z"
+       id="path4172"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccc" />
+    <path
+       style="fill:none;stroke:#00f669;stroke-width:1.88999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.97426471;stroke-dasharray:none;filter:url(#filter3790-4-3)"
+       d="m 500.02206,267 82.73187,0 0,20 -82.73149,0 0,20 -24.77638,-30 24.776,-30 z"
+       id="path4172-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccc"
+       transform="matrix(-1,0,0,-1,1141,551)" />
+    <path
+       style="fill:none;stroke:#00f669;stroke-width:1.88999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.97426471;stroke-dasharray:none;filter:url(#filter3790-4-3-9)"
+       d="m 515.27206,251 c 0,0 -0.43055,-23.63624 7.98679,-31.8119 8.50988,-8.26554 21.75946,-13.09991 33.61816,-12.7707 9.64376,0.26772 20.21746,1.59362 28.23975,6.95241 7.10786,4.74796 13.5673,12.01808 15.66115,20.30546 1.59745,6.32269 -0.0575,13.56965 -3.15611,19.30785 -3.58771,6.64397 -16.68872,15.31705 -16.68872,15.31705 l -13.25623,-14.48536 c 0,0 12.96022,-8.67462 13.45993,-12.23698 0.6168,-4.39707 -2.92801,-11.32438 -6.20554,-14.31978 -4.12231,-3.76747 -12.72206,-3.83402 -18.30619,-3.76484 -7.1481,0.0886 -15.20328,2.11681 -20.18583,7.24295 -4.01164,4.12725 -4.16678,20.01384 -4.16678,20.01384 l 21.5,0.5 -29.52638,18.5 -31.974,-19.5 z"
+       id="path4172-0-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssssccssssccccc"
+       transform="matrix(-1,0,0,-1,1132,443)" />
+  </g>
+</svg>

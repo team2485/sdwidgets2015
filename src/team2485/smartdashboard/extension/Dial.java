@@ -11,6 +11,9 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 import edu.wpi.first.smartdashboard.gui.Widget;
+import edu.wpi.first.smartdashboard.properties.BooleanProperty;
+import edu.wpi.first.smartdashboard.properties.DoubleProperty;
+import edu.wpi.first.smartdashboard.properties.IntegerProperty;
 import edu.wpi.first.smartdashboard.properties.Property;
 import edu.wpi.first.smartdashboard.types.DataType;
 
@@ -24,6 +27,10 @@ public class Dial extends Widget {
     
     int scaling;
 	private BufferedImage backgroundImg;
+	DoubleProperty  SizeMultiplier = new DoubleProperty (this, "Size", 6);
+	DoubleProperty  Devitation     = new DoubleProperty (this, "Devitation", 5);
+	IntegerProperty Range          = new IntegerProperty(this, "Range", 25);
+	BooleanProperty Test		   = new BooleanProperty(this, "Test", false);
 	
 	@Override
 	public void init() {
@@ -38,26 +45,24 @@ public class Dial extends Widget {
 	        this.setMaximumSize(new Dimension(4000, 2000));
 	        this.setValue(10);	 
 	        
-	        boolean test = true;
-	        
-//	        new Thread(new Runnable() {
-//	            @Override
-//	            public void run() {
-//	                while (true) {
-//	                    try {
-//	                        Thread.sleep(100);
-//	                    } catch (InterruptedException ex) {
-//	                    }
-//	                    if (test) {
-//	                    	val+= 1;
-//	                        setValue(val);
-//	                        if (val > 25) {
-//	                            val = 0;
-//	                        }
-//	                    }
-//	                }
-//	            }
-//	        }).start();
+	        new Thread(new Runnable() {
+	            @Override
+	            public void run() {
+	                while (true) {
+	                    try {
+	                        Thread.sleep(100);
+	                    } catch (InterruptedException ex) {
+	                    }
+	                    if (Test.getValue()) {
+	                    	val+= .1;
+	                        setValue(val);
+	                        if (val > Range.getValue()) {
+	                            val = 0;
+	                        }
+	                    }
+	                }
+	            }
+	        }).start();
 	    }
 		
 	
@@ -72,7 +77,7 @@ public class Dial extends Widget {
 	@Override
 	public void setValue(Object arg0) {
 		value = ((Number) arg0).doubleValue();
-		degrees = value/.15 - 90;
+		degrees = value* SizeMultiplier.getValue() - 90;
 		
 		scaling = Math.min((int)(getWidth()*.75), getHeight());
 		
@@ -87,15 +92,15 @@ public class Dial extends Widget {
 		Font font = new Font("BOOMBOX", Font.BOLD, (scaling / 16));
 		gg.setFont(font);
 		gg.setColor(Color.YELLOW);
-		gg.drawImage(backgroundImg, 0, 0,scaling,scaling, null);
-		gg.translate(scaling / 2, (int) scaling * .55);
+		gg.drawImage(backgroundImg, 0, 0,scaling,scaling*backgroundImg.getHeight()/backgroundImg.getWidth(), null);
+		gg.translate(scaling / 2, (int) scaling * .475);
 		gg.rotate(Math.toRadians(degrees));
 		gg.fillRect((int)(-scaling*.02), (int)(-scaling*.39), (int)(scaling*.01), (int)(scaling*.41));
 		gg.rotate(Math.toRadians(-degrees));
 		gg.setColor(Color.GREEN);
-		for (int i = 0; i < 30; i += 5) {
-			double x = Math.cos(Math.toRadians(i / .15 - 180));
-			double y = Math.sin(Math.toRadians(i / .15 - 180));
+		for (int i = 0; i <= Range.getValue(); i += Devitation.getValue()) {
+			double x = Math.cos(Math.toRadians(i * SizeMultiplier.getValue() - 180));
+			double y = Math.sin(Math.toRadians(i * SizeMultiplier.getValue() - 180));
 			gg.drawString(
 					"" + i,
 					(int) (x*scaling*.3 - (gg.getFontMetrics().stringWidth("" + i/100) / 2)),
