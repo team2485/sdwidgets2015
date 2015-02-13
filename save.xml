@@ -1,23 +1,29 @@
 <xml version="1.0">
 <dashboard>
+	<widget field="Potentiometer Average Value" type="String" class="team2485.smartdashboard.extension.ClapperandContainer">
+		<location x="490" y="25"/>
+		<width>553</width>
+		<height>596</height>
+		<property name="Test" value="true"/>
+	</widget>
 	<widget field="Value5" type="Number" class="team2485.smartdashboard.extension.Dial">
-		<location x="460" y="176"/>
+		<location x="46" y="47"/>
 		<width>331</width>
 	</widget>
-	<widget field="Potentiometer Average Value" type="String" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
-		<location x="595" y="402"/>
+	<widget field="2" type="String" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="305" y="317"/>
 	</widget>
 	<widget field="Value4" type="Number" class="team2485.smartdashboard.extension.AirTankWidget">
-		<location x="242" y="498"/>
+		<location x="34" y="294"/>
 	</widget>
 	<widget field="Value1" type="Number" class="team2485.smartdashboard.extension.AirTankWidget">
-		<location x="246" y="351"/>
+		<location x="30" y="435"/>
 	</widget>
 	<widget field="Value3" type="Number" class="team2485.smartdashboard.extension.BatteryWidget">
-		<location x="1073" y="385"/>
+		<location x="21" y="573"/>
 	</widget>
 	<static-widget class="team2485.smartdashboard.extension.Background">
-		<location x="3" y="0"/>
+		<location x="0" y="3"/>
 	</static-widget>
 </dashboard>
 <live-window>
