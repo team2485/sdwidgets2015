@@ -18,9 +18,9 @@ public class Dial extends Widget {
 	
 	public static final String NAME = "Dial";
     public static final DataType[] TYPES = {DataType.NUMBER};
-    int degrees;
-    int val;
-    int value;
+    double degrees;
+    double val;
+    double value;
     
     int scaling;
 	private BufferedImage backgroundImg;
@@ -40,24 +40,24 @@ public class Dial extends Widget {
 	        
 	        boolean test = true;
 	        
-	        new Thread(new Runnable() {
-	            @Override
-	            public void run() {
-	                while (true) {
-	                    try {
-	                        Thread.sleep(100);
-	                    } catch (InterruptedException ex) {
-	                    }
-	                    if (test) {
-	                    	val+= 10;
-	                        setValue(val);
-	                        if (val > 2500) {
-	                            val = 0;
-	                        }
-	                    }
-	                }
-	            }
-	        }).start();
+//	        new Thread(new Runnable() {
+//	            @Override
+//	            public void run() {
+//	                while (true) {
+//	                    try {
+//	                        Thread.sleep(100);
+//	                    } catch (InterruptedException ex) {
+//	                    }
+//	                    if (test) {
+//	                    	val+= 1;
+//	                        setValue(val);
+//	                        if (val > 25) {
+//	                            val = 0;
+//	                        }
+//	                    }
+//	                }
+//	            }
+//	        }).start();
 	    }
 		
 	
@@ -71,8 +71,8 @@ public class Dial extends Widget {
 
 	@Override
 	public void setValue(Object arg0) {
-		value = (int) arg0;
-		degrees = (int) value/15 - 90;
+		value = ((Number) arg0).doubleValue();
+		degrees = value/.15 - 90;
 		
 		scaling = Math.min((int)(getWidth()*.75), getHeight());
 		
@@ -93,16 +93,17 @@ public class Dial extends Widget {
 		gg.fillRect((int)(-scaling*.02), (int)(-scaling*.39), (int)(scaling*.01), (int)(scaling*.41));
 		gg.rotate(Math.toRadians(-degrees));
 		gg.setColor(Color.GREEN);
-		for (int i = 0; i < 3001; i += 500) {
-			double x = Math.cos(Math.toRadians(i / 15 - 165));
-			double y = Math.sin(Math.toRadians(i / 15 - 165));
+		for (int i = 0; i < 30; i += 5) {
+			double x = Math.cos(Math.toRadians(i / .15 - 180));
+			double y = Math.sin(Math.toRadians(i / .15 - 180));
 			gg.drawString(
-					"" + i/100,
+					"" + i,
 					(int) (x*scaling*.3 - (gg.getFontMetrics().stringWidth("" + i/100) / 2)),
 					(int) (y*scaling*.3 + (gg.getFontMetrics().getHeight() / 2)));
 			
 			gg.fillOval((int) (x*scaling*.25), (int) (y*scaling*.25), 2, 2);
 		}
+		gg.drawString("" + val, scaling/2, scaling*5/6);
 		gg.translate(-scaling / 2, -scaling / 2);
 		//gg.drawString("" + value, 20, 20);
 	}

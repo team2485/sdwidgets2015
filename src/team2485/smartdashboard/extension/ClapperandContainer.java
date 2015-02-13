@@ -31,12 +31,18 @@ public class ClapperandContainer extends Widget {
     Property Test = new BooleanProperty(this, "Test", false);
 
     private BufferedImage containerArm, clapper, strongBack, base;
-	private int clapperVal, containerVal;
+	double clapperVal;
+
+	private double containerVal;
 	private double rotVal;
 
 	private double rawVal;
 	
-	private int clapperY, containerY, clapperRange, clapperLoc, containerRange, containerLoc;
+	double clapperY;
+
+	double containerY;
+
+	private int clapperRange, clapperLoc, containerRange, containerLoc;
 	
 	private double scaling;
 	private Font font1, font2;
@@ -44,6 +50,8 @@ public class ClapperandContainer extends Widget {
 	private double temporaryStringWidth2;
 
 	private String rotation;
+
+	private boolean error = false;
 	
 	
 
@@ -87,8 +95,8 @@ public class ClapperandContainer extends Widget {
                     if ((boolean) Test.getValue()) {
                         rawVal = rawVal + 1;
 
-                        setValue(rawVal + "," + (100-rawVal) + "," + (rawVal-45)*.5);
-                        if (rawVal > 100) {
+                        setValue(rawVal*.01 + "," + (100-rawVal)*.01 + "," + 0);//(rawVal-45)*.5);
+                        if (rawVal > 120) {
                             rawVal = 1;
                         }
                     }
@@ -112,22 +120,23 @@ public class ClapperandContainer extends Widget {
         final String[] vals = ((String) o).split(",");
         
         try{
-        clapperVal     = (int) Double.parseDouble(vals[0]);
-        containerVal   = (int) Double.parseDouble(vals[1]);
+        clapperVal     = 	   Double.parseDouble(vals[0]);
+        containerVal   =       Double.parseDouble(vals[1]);
         rotVal 		   =       Double.parseDouble(vals[2]);
         } catch(Exception e){
         	new IllegalArgumentException(" Must be passed a string consisting of three doubles separated by commas: \n "
         			+ "Clapper percent height, container percent height, and strongback angle. ");
+        	error = true;
         }
         
-        clapperRange   = (int)(270*scaling);
-        clapperLoc     = (int)(80*scaling);
+        clapperRange   = (int) (270*scaling);
+        clapperLoc     = (int) (80*scaling);
         
-        containerRange = (int)(270*scaling);
-        containerLoc   = (int)(0  *scaling);
+        containerRange = (int) (270*scaling);
+        containerLoc   = (int) (0  *scaling);
         
-        clapperY       = (int) ((clapperVal*.01   *  clapperRange   + clapperLoc  )+(-strongBack.getHeight()*scaling));
-        containerY     = (int) ((containerVal*.01 *  containerRange + containerLoc)+(-strongBack.getHeight()*scaling));
+        clapperY       = (((1-clapperVal)   *  clapperRange   + clapperLoc  )+(-strongBack.getHeight()*scaling));
+        containerY     = (((1-containerVal) *  containerRange + containerLoc)+(-strongBack.getHeight()*scaling));
         
         
         repaint();
@@ -150,18 +159,18 @@ public class ClapperandContainer extends Widget {
 		
 			g.rotate(Math.toRadians(rotVal));
 				
-				g.drawString(clapperVal + "", (int)(200*scaling), (int)(clapperY + 100*scaling));
-				g.drawString(containerVal + "", (int)(50*scaling), containerY);
-				temporaryStringWidth1 = g.getFontMetrics().getStringBounds(clapperVal   + "", g).getWidth();
-				temporaryStringWidth2 = g.getFontMetrics().getStringBounds(containerVal + "", g).getWidth();
+				g.drawString("" + (int)(clapperVal*100),   (int)(200*scaling), (int)(clapperY + 100*scaling));
+				g.drawString("" + (int)(containerVal*100), (int)(50*scaling),  (int) containerY);
+				temporaryStringWidth1 = g.getFontMetrics().getStringBounds("" + (int)(clapperVal  *100), g).getWidth();
+				temporaryStringWidth2 = g.getFontMetrics().getStringBounds("" + (int)(containerVal*100) + "", g).getWidth();
 				g.setFont(font2);
 				
 				g.setColor(Color.YELLOW);
 				g.drawString("%",(int)(200*scaling + temporaryStringWidth1), (int)(clapperY  + 100*scaling));
 				g.drawString("%",(int)(50 *scaling + temporaryStringWidth2), (int)(containerY             ));
 				
-				g.drawImage (clapper,      (int)(strongBack.getWidth()*.5*scaling), clapperY,   (int)(clapper.getWidth()*scaling),     (int)(clapper.getHeight()*scaling),      null);	
-				g.drawImage (containerArm, (int)(strongBack.getWidth()*.5*scaling), containerY, (int)(containerArm.getWidth()*scaling),(int)(containerArm.getHeight()*scaling), null);
+				g.drawImage (clapper,      (int)(strongBack.getWidth()*.5*scaling), (int)clapperY,   (int)(clapper.getWidth()*scaling),     (int)(clapper.getHeight()*scaling),      null);	
+				g.drawImage (containerArm, (int)(strongBack.getWidth()*.5*scaling), (int)containerY, (int)(containerArm.getWidth()*scaling),(int)(containerArm.getHeight()*scaling), null);
 				
 				g.drawImage (strongBack,   (int)(strongBack.getWidth()*-1/2*scaling), (int)(-strongBack.getHeight()*.98*scaling), (int)(strongBack.getWidth()*scaling),(int)(strongBack.getHeight()*scaling), null);
 				
@@ -177,6 +186,9 @@ public class ClapperandContainer extends Widget {
 			
 			g.setColor(Color.YELLOW);
 			g.drawString("° Detected",(int)+(-225*scaling + temporaryStringWidth1), (int)(-120*scaling));
+			if (error){
+				gg.drawString("Errors!", 20, 20);
+			}
 		
 		g.translate(-scaling*400, -scaling*750);
 		

@@ -1,14 +1,16 @@
 <xml version="1.0">
 <dashboard>
-	<widget field="Potentiometer Average Value" type="String" class="team2485.smartdashboard.extension.ClapperandContainer">
-		<location x="490" y="25"/>
-		<width>553</width>
-		<height>596</height>
+	<widget field="Clapper and Container" type="String" class="team2485.smartdashboard.extension.ClapperandContainer">
+		<location x="743" y="214"/>
 		<property name="Test" value="true"/>
+	</widget>
+	<widget field="RPM" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="519" y="278"/>
 	</widget>
 	<widget field="Value5" type="Number" class="team2485.smartdashboard.extension.Dial">
 		<location x="46" y="47"/>
-		<width>331</width>
+		<width>197</width>
+		<height>144</height>
 	</widget>
 	<widget field="2" type="String" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
 		<location x="305" y="317"/>
