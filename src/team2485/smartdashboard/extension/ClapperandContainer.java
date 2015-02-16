@@ -75,9 +75,6 @@ public class ClapperandContainer extends Widget {
         this.setMinimumSize(new Dimension(100, 100));
         this.setMaximumSize((new Dimension(800, 800)));
 
-        final BorderLayout layout = new BorderLayout(0, 0);
-        this.setLayout(layout);
-
         new Thread(new Runnable() {
 
 
