@@ -13,7 +13,7 @@ import javax.imageio.ImageIO;
 
 public class AirTankWidget extends Widget {
 
-    public static final String NAME = "Air Widget";
+    public static final String NAME = "2485 Air Widget";
     public static final DataType[] TYPES = {DataType.NUMBER};
 
     private static final double MAX_VAL = 120, MIN_VAL = 0;

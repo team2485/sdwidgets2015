@@ -23,7 +23,7 @@ public class ClapperandContainer extends Widget {
 
 	private static final long serialVersionUID = 1L;
 	
-	public static final String NAME = "Clapper and Container";
+	public static final String NAME = "2485 Clapper and Container";
     public static final DataType[] TYPES = {DataType.STRING};
 
 
@@ -51,6 +51,10 @@ public class ClapperandContainer extends Widget {
 	private String rotation;
 
 	private boolean error = false;
+
+	private double clapperRaw;
+
+	private double containerRaw;
 	
 	
 
@@ -73,12 +77,6 @@ public class ClapperandContainer extends Widget {
 
         final BorderLayout layout = new BorderLayout(0, 0);
         this.setLayout(layout);
-        
-        clapperRange = 100;
-        clapperLoc = 240;
-        
-        containerRange = 190;
-        containerLoc = 0;
 
         new Thread(new Runnable() {
 
@@ -86,17 +84,21 @@ public class ClapperandContainer extends Widget {
 			@Override
             public void run() {
                 while (true) {
-            
                 	try {
                         Thread.sleep(30);
                     } catch (InterruptedException ex) {
                     }
                     if ((boolean) Test.getValue()) {
                         rawVal = rawVal + 1;
-
-                        setValue(rawVal*.01 + "," + (100-rawVal)*.01 + "," + 0);//(rawVal-45)*.5);
-                        if (rawVal > 120) {
-                            rawVal = 1;
+                        int tempVal = (int) rawVal;
+                        if (rawVal > 100){
+                        	tempVal = 100;
+                        } else if(rawVal < 0){
+                        	tempVal = 0;
+                    	}
+                        setValue(tempVal*.01 + "," + 2700 + "," + (100-tempVal)*.01 + "," + 4500 + "," + (rawVal-45)*.1);
+                        if (rawVal > 115) {
+                            rawVal = -15;
                         }
                     }
                 }
@@ -119,20 +121,28 @@ public class ClapperandContainer extends Widget {
         final String[] vals = ((String) o).split(",");
         
         try{
-        clapperVal     = 	   Double.parseDouble(vals[0]);
-        containerVal   =       Double.parseDouble(vals[1]);
-        rotVal 		   =       Double.parseDouble(vals[2]);
+        	if (vals.length>3){
+        		clapperVal     = 	   Double.parseDouble(vals[0]);
+        		clapperRaw	   =       Double.parseDouble(vals[1]);
+                containerVal   =       Double.parseDouble(vals[2]);
+                containerRaw   =       Double.parseDouble(vals[3]);
+                rotVal 		   =       Double.parseDouble(vals[4]);
+        	} else {
+        		clapperVal     = 	   Double.parseDouble(vals[0]);
+                containerVal   =       Double.parseDouble(vals[1]);
+                rotVal 		   =       Double.parseDouble(vals[2]);
+        	}
         } catch(Exception e){
         	new IllegalArgumentException(" Must be passed a string consisting of three doubles separated by commas: \n "
         			+ "Clapper percent height, container percent height, and strongback angle. ");
         	error = true;
         }
         
-        clapperRange   = (int) (270*scaling);
+        clapperRange   = (int) (300*scaling);
         clapperLoc     = (int) (80*scaling);
         
-        containerRange = (int) (270*scaling);
-        containerLoc   = (int) (0  *scaling);
+        containerRange = (int) (500*scaling);
+        containerLoc   = (int) (-10  *scaling);
         
         clapperY       = (((1-clapperVal)   *  clapperRange   + clapperLoc  )+(-strongBack.getHeight()*scaling));
         containerY     = (((1-containerVal) *  containerRange + containerLoc)+(-strongBack.getHeight()*scaling));
@@ -145,12 +155,9 @@ public class ClapperandContainer extends Widget {
     protected void paintComponent(final Graphics gg) {
 		scaling = Math.min(getWidth(), getHeight())*0.0012;//0.0015;
 		font1 = new Font("BoomBox", 0, (int)(35*scaling));
-		font2 = new Font("BoomBox", 0, (int)(15*scaling));
+		font2 = new Font("BoomBox", 0, (int)(20*scaling));
 		Graphics2D g = (Graphics2D) gg;
-		RenderingHints rh = new RenderingHints(
-	             RenderingHints.KEY_ANTIALIASING,
-	             RenderingHints.VALUE_ANTIALIAS_ON);
-	    g.setRenderingHints(rh);
+
 		g.setColor(Color.GREEN);
 		g.setFont(font1);
 		
@@ -158,15 +165,19 @@ public class ClapperandContainer extends Widget {
 		
 			g.rotate(Math.toRadians(rotVal));
 				
-				g.drawString("" + (int)(clapperVal*100),   (int)(200*scaling), (int)(clapperY + 100*scaling));
-				g.drawString("" + (int)(containerVal*100), (int)(50*scaling),  (int) containerY);
+				g.drawString("" + (int)(clapperVal*100),   (int)(200*scaling), (int)(clapperY   + 90*scaling));
+				g.drawString("" + (int)(containerVal*100), (int)(60*scaling) , (int)(containerY - 20*scaling));
 				temporaryStringWidth1 = g.getFontMetrics().getStringBounds("" + (int)(clapperVal  *100), g).getWidth();
 				temporaryStringWidth2 = g.getFontMetrics().getStringBounds("" + (int)(containerVal*100) + "", g).getWidth();
 				g.setFont(font2);
 				
 				g.setColor(Color.YELLOW);
-				g.drawString("%",(int)(200*scaling + temporaryStringWidth1), (int)(clapperY  + 100*scaling));
-				g.drawString("%",(int)(50 *scaling + temporaryStringWidth2), (int)(containerY             ));
+				g.drawString("%",(int)(200*scaling + temporaryStringWidth1), (int)(clapperY    + 90*scaling));
+				g.drawString("%",(int)(60 *scaling + temporaryStringWidth2), (int)(containerY  - 20*scaling));
+				if (containerRaw > 0 && clapperRaw > 0){
+					g.drawString("" + containerRaw,(int)(200*scaling), (int)(clapperY + 110*scaling));
+					g.drawString("" + clapperRaw,  (int)(60 *scaling), (int)(containerY           ));
+				}
 				
 				g.drawImage (clapper,      (int)(strongBack.getWidth()*.5*scaling), (int)clapperY,   (int)(clapper.getWidth()*scaling),     (int)(clapper.getHeight()*scaling),      null);	
 				g.drawImage (containerArm, (int)(strongBack.getWidth()*.5*scaling), (int)containerY, (int)(containerArm.getWidth()*scaling),(int)(containerArm.getHeight()*scaling), null);

@@ -1,10 +1,12 @@
 package team2485.smartdashboard.extension;
 
 import edu.wpi.first.smartdashboard.gui.*;
+import edu.wpi.first.smartdashboard.properties.IntegerProperty;
 import edu.wpi.first.smartdashboard.properties.Property;
 import edu.wpi.first.smartdashboard.robot.Robot;
 import edu.wpi.first.wpilibj.tables.IRemote;
 import edu.wpi.first.wpilibj.tables.IRemoteConnectionListener;
+
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -16,12 +18,13 @@ import java.awt.Toolkit;
 import java.awt.geom.Path2D;
 import java.awt.image.BufferedImage;
 import java.io.*;
+
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 public class Background extends StaticWidget implements IRemoteConnectionListener {
-    public static final String NAME = "Display > Background";
+    public static final String NAME = "Display > 2485 Background";
 
     private static final String DS_FOCUS_EXE = "C:\\Program Files\\SmartDashboard\\DSFocusAssistant.exe";
 
@@ -30,6 +33,8 @@ public class Background extends StaticWidget implements IRemoteConnectionListene
     private BufferedImage leftImage, rightImage, connectedImage, disconnectedImage, logoBuffer;
     private GradientPaint redTopGrad, greenTopGrad, redBottomGrad, greenBottomGrad, redLineGrad, greenLineGrad;
     private Path2D shape, bottom;
+    
+    //private final Property style = new IntegerProperty(this, "Style (0 - 1)", 1);
 
     @Override
     public void init() {

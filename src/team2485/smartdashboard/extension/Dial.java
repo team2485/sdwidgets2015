@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
@@ -20,7 +21,7 @@ import edu.wpi.first.smartdashboard.types.DataType;
 
 public class Dial extends Widget {
 	
-	public static final String NAME = "Dial";
+	public static final String NAME = "2485 Dial";
     public static final DataType[] TYPES = {DataType.NUMBER};
     double degrees;
     double val;
@@ -91,7 +92,16 @@ public class Dial extends Widget {
 	
 	
 	protected void paintComponent(final Graphics g) {
+		double displayVal = val * 100;
+		displayVal = (int) displayVal;
+		displayVal = displayVal/100;
 		Graphics2D gg = (Graphics2D) g;
+		
+		RenderingHints rh = new RenderingHints(
+	             RenderingHints.KEY_ANTIALIASING,
+	             RenderingHints.VALUE_ANTIALIAS_ON);
+	    gg.setRenderingHints(rh);
+	    
 		Font font = new Font("BOOMBOX", Font.BOLD, (scaling / 16));
 		gg.setFont(font);
 		gg.setColor(new Color(228, 192, 37));
@@ -103,17 +113,19 @@ public class Dial extends Widget {
 		gg.setColor(Color.GREEN);
 		for (int i = 0; i <= Range.getValue(); i += Devitation.getValue()) {
 			
-			double x = Math.cos(Math.toRadians(i * SizeMultiplier.getValue() - 180));
-			double y = Math.sin(Math.toRadians(i * SizeMultiplier.getValue() - 180));
+			double x = Math.cos(Math.toRadians(i * SizeMultiplier.getValue()*.9 - 180));
+			double y = Math.sin(Math.toRadians(i * SizeMultiplier.getValue()*.9 - 180));
 			gg.drawString(
 					"" + i,
-					(int) (x*scaling*.3 - (gg.getFontMetrics().stringWidth("" + i/100) / 2)),
+					(int) (x*scaling*.3 - (gg.getFontMetrics().stringWidth("" + i) / 2)),
 					(int) (y*scaling*.3 + (gg.getFontMetrics().getHeight() / 2)));
 			
-			gg.fillOval((int) (x*scaling*.25), (int) (y*scaling*.25), 2, 2);
+			gg.fillOval((int) (x*scaling*.2), (int) (y*scaling*.2), 2, 2);
 		}
-		gg.setFont(new Font("Ubuntu", Font.PLAIN, (scaling / 25)));
-		gg.drawString("" + (int)val + "  " + Units.getValue() + " x " + Multiplier.getValue(), -scaling*1/10, +scaling/6);
+		
+		gg.drawString("" + displayVal, (int)(g.getFontMetrics().getStringBounds("" + displayVal,gg).getWidth()/-2), scaling/6);
+		gg.setFont(new Font("BOOMBOX", Font.PLAIN, (scaling / 20)));
+		gg.drawString("" + Units.getValue() + " x " + Multiplier.getValue(), -scaling*1/10, scaling/4);
 		gg.translate(-scaling / 2, -scaling / 2);
 		//gg.drawString("" + value, 20, 20);
 	}

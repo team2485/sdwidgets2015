@@ -25,72 +25,16 @@
        inkscape:menu="Shadows and Glows"
        inkscape:menu-tooltip="Glow of object's own color at the edges"
        color-interpolation-filters="sRGB"
-       id="filter3774-1">
-      <feGaussianBlur
-         stdDeviation="1"
-         result="result91"
-         id="feGaussianBlur3776-7" />
-      <feComposite
-         in="SourceGraphic"
-         operator="over"
-         in2="result91"
-         id="feComposite3778-4"
-         result="fbSourceGraphic" />
-      <feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix3817" />
-      <feGaussianBlur
-         id="feGaussianBlur3819"
-         stdDeviation="5"
-         result="result91"
-         in="fbSourceGraphic" />
-      <feComposite
-         id="feComposite3821"
-         in2="result91"
-         in="fbSourceGraphic"
-         operator="over" />
-    </filter>
-    <filter
-       inkscape:label="Glow"
-       inkscape:menu="Shadows and Glows"
-       inkscape:menu-tooltip="Glow of object's own color at the edges"
-       color-interpolation-filters="sRGB"
-       id="filter3774-1-9">
-      <feGaussianBlur
-         stdDeviation="1.8"
-         result="result91"
-         id="feGaussianBlur3776-7-4" />
-      <feComposite
-         in="SourceGraphic"
-         operator="over"
-         in2="result91"
-         id="feComposite3778-4-8"
-         result="fbSourceGraphic" />
-      <feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix3817-8" />
-      <feGaussianBlur
-         id="feGaussianBlur3819-2"
-         stdDeviation="5"
-         result="result91"
-         in="fbSourceGraphic" />
-      <feComposite
-         id="feComposite3821-4"
-         in2="result91"
-         in="fbSourceGraphic"
-         operator="over" />
-    </filter>
-    <filter
-       inkscape:collect="always"
        id="filter3921">
       <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="0.29999999999999999"
+         stdDeviation="2"
+         result="result91"
          id="feGaussianBlur3923" />
+      <feComposite
+         in="SourceGraphic"
+         operator="over"
+         in2="result91"
+         id="feComposite3925" />
     </filter>
   </defs>
   <sodipodi:namedview
@@ -100,18 +44,21 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="-69.32365"
-     inkscape:cy="160.76224"
+     inkscape:zoom="2"
+     inkscape:cx="34.219058"
+     inkscape:cy="139.2106"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      width="200px"
-     inkscape:window-width="831"
-     inkscape:window-height="423"
-     inkscape:window-x="876"
-     inkscape:window-y="202"
-     inkscape:window-maximized="0" />
+     inkscape:window-width="1246"
+     inkscape:window-height="816"
+     inkscape:window-x="306"
+     inkscape:window-y="133"
+     inkscape:window-maximized="0"
+     inkscape:snap-center="true"
+     showguides="true"
+     inkscape:guide-bbox="true" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -130,22 +77,19 @@
      id="layer1"
      transform="translate(0,-852.36218)">
     <path
-       style="fill:none;stroke:#e4c025;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter3774-1-9)"
-       d="m 31.001634,1019.4422 c 0,0 -16.544837,-16.5661 -17,-50.00002 -0.731834,-53.75682 46.260505,-85.61716 85.999996,-85.168 40.8351,0.46153 85.44422,29.95905 86,85.168 0.34095,33.86792 -16.26752,51.01272 -16.26752,51.01272"
-       id="path3827-5"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 169.19193,162.19599 -0.99058,-2.27381 1.73303,-2.9411 c 4.31725,-7.32676 7.26395,-15.40607 8.98301,-24.62972 1.02511,-5.50031 1.28911,-18.43721 0.49895,-24.4501 C 176.38296,84.818075 164.45429,64.590853 146.90877,52.778779 136.31962,45.649903 123.14417,40.626739 110.09786,38.744556 104.28075,37.905324 93.510692,37.90927 88.000778,38.752653 70.995588,41.355579 55.167007,49.507194 42.571595,62.148382 29.90616,74.859851 22.404211,89.946144 20.435441,106.66382 c -0.529803,4.49879 -0.209454,17.01898 0.565388,22.09709 1.653376,10.83578 5.004101,20.24548 9.927986,27.88036 l 1.677625,2.60129 -1.052667,2.13683 -1.052667,2.13684 -1.719589,-2.44003 c -2.727651,-3.87043 -6.600378,-11.83666 -8.405055,-17.28927 -3.06673,-9.26575 -4.270618,-17.11772 -4.282421,-27.93072 -0.01094,-10.02236 1.109615,-17.23686 4.036171,-25.986175 7.032907,-21.025781 23.837398,-38.983046 45.446364,-48.563946 4.403165,-1.952257 12.355945,-4.584523 16.786174,-5.556003 11.087986,-2.431421 24.06106,-2.340382 35.51329,0.249217 35.88747,8.11494 61.06916,35.061366 65.37584,69.957407 2.25888,18.30322 -0.64029,36.50755 -8.02359,50.38136 -1.17661,2.21093 -4.81151,8.13173 -4.99225,8.13173 -0.0294,0 -0.49929,-1.02322 -1.04411,-2.27381 l 0,0 z"
+       id="path3919"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="csssc"
-       inkscape:export-filename="C:\Users\Aidan\Documents\GitHub\sdwidgets2015\src\team2485\smartdashboard\extension\res\Dial.png"
-       inkscape:export-xdpi="200.15793"
-       inkscape:export-ydpi="200.15793" />
+       transform="translate(0,852.36218)" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4.30000019;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter3921)"
-       d="m 31.001632,1019.4422 c 0,0 -16.544837,-16.5661 -17,-50.00004 -0.731834,-53.75681 46.260505,-85.61715 85.999998,-85.168 40.8351,0.46154 85.44422,29.95905 86,85.168 0.34095,33.86794 -16.26752,51.01274 -16.26752,51.01274"
-       id="path3827"
+       id="path3827-1"
+       style="fill:none;stroke:#e4c025;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.30000019;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter3921)"
+       d="m 165.96875,1012.0625 c 23.74936,-34.91959 11.71045,-89.14189 -26.27212,-109.00028 -12.57692,-7.12568 -27.18329,-11.04338 -41.72788,-10.78097 -40.163016,0.14517 -78.081892,36.13382 -75.9375,77.125 0.139791,14.91366 3.857573,29.91765 12.84375,42.03125 l -3.873368,8.0047 c 0,0 -16.544837,-16.5661 -17,-50.00004 -0.731834,-53.75681 46.260505,-85.61715 85.999998,-85.168 40.8351,0.46154 85.44422,29.95905 86,85.168 0.34095,33.86794 -16.26752,51.01274 -16.26752,51.01274 z"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="csssc"
-       inkscape:export-xdpi="200.15793"
-       inkscape:export-ydpi="200.15793"
-       inkscape:export-filename="C:\Users\Aidan\Documents\GitHub\sdwidgets2015\src\team2485\smartdashboard\extension\res\Dial.png" />
+       sodipodi:nodetypes="ccccccssscc"
+       inkscape:export-filename="C:\Users\Aidan\Documents\GitHub\sdwidgets2015\src\team2485\smartdashboard\extension\res\Dial.png"
+       inkscape:export-xdpi="359.88535"
+       inkscape:export-ydpi="359.88535" />
   </g>
 </svg>

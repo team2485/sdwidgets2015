@@ -1,37 +1,41 @@
 <xml version="1.0">
 <dashboard>
+	<widget field="Value4" type="Number" class="team2485.smartdashboard.extension.NumberWidget">
+		<location x="282" y="197"/>
+		<width>140</width>
+		<height>97</height>
+		<property name="GUI Size" value="35.0"/>
+	</widget>
 	<widget field="RPM" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
 		<location x="528" y="263"/>
 	</widget>
 	<widget field="Clapper and Container" type="String" class="team2485.smartdashboard.extension.ClapperandContainer">
-		<location x="902" y="198"/>
-		<width>395</width>
-		<height>479</height>
+		<location x="819" y="43"/>
+		<width>437</width>
+		<height>589</height>
 		<property name="Test" value="true"/>
 	</widget>
 	<widget field="2" type="String" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
 		<location x="305" y="317"/>
-	</widget>
-	<widget field="Value4" type="Number" class="team2485.smartdashboard.extension.AirTankWidget">
-		<location x="34" y="294"/>
 	</widget>
 	<widget field="Value1" type="Number" class="team2485.smartdashboard.extension.AirTankWidget">
 		<location x="30" y="435"/>
 	</widget>
 	<widget field="Value3" type="Number" class="team2485.smartdashboard.extension.BatteryWidget">
 		<location x="21" y="573"/>
+		<property name="Test" value="true"/>
 	</widget>
 	<widget field="Value5" type="Number" class="team2485.smartdashboard.extension.Dial">
-		<location x="28" y="105"/>
-		<width>322</width>
-		<height>253</height>
-		<property name="Size" value="3.0"/>
-		<property name="Devitation" value="10.0"/>
-		<property name="Range" value="60"/>
+		<location x="27" y="118"/>
+		<width>346</width>
+		<height>285</height>
+		<property name="Size Multiplier" value="2.5"/>
+		<property name="Devitation" value="16.0"/>
+		<property name="Range" value="80"/>
 		<property name="Test" value="true"/>
 	</widget>
 	<static-widget class="team2485.smartdashboard.extension.Background">
-		<location x="1" y="8"/>
+		<location x="3" y="-20"/>
 	</static-widget>
 </dashboard>
 <live-window>

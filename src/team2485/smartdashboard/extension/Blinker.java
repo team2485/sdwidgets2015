@@ -16,7 +16,7 @@ import javax.imageio.ImageIO;
 
 public class Blinker extends Widget {
     
-    public static final String NAME = "Blinker";
+    public static final String NAME = "2485 Blinker";
     public static final DataType[] TYPES = {DataType.BOOLEAN};
     
     private static final int PAUSE_FRAMES = 30;
@@ -37,7 +37,7 @@ public class Blinker extends Widget {
     @SuppressWarnings("empty-statement")
     public void init() {
         try {
-            ImageNull = ImageIO.read(getClass().getResourceAsStream("/team2485/smartdashboard/extension/res/BlinkerNull.png"));
+            ImageNull   = ImageIO.read(getClass().getResourceAsStream("/team2485/smartdashboard/extension/res/BlinkerNull.png"));
             ImageResize = ImageIO.read(getClass().getResourceAsStream("/team2485/smartdashboard/extension/res/BlinkerResize.png"));
         } catch (IOException e) {
             System.err.println("Error loading images.");
@@ -101,7 +101,7 @@ public class Blinker extends Widget {
                 color = new Color(0, 250, 0);
             }
         } else {
-            color = new Color(0, 0, 0, 0);
+            color = new Color(250, 0, 0);
         }
         
         gg.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);

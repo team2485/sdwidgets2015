@@ -5,14 +5,16 @@ import edu.wpi.first.smartdashboard.properties.BooleanProperty;
 import edu.wpi.first.smartdashboard.properties.IntegerProperty;
 import edu.wpi.first.smartdashboard.properties.Property;
 import edu.wpi.first.smartdashboard.types.DataType;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+
 import javax.imageio.ImageIO;
 
 public class BatteryWidget extends Widget {
 
-    public static final String NAME = "Battery Widget";
+    public static final String NAME = "2485 Battery Widget";
     public static final DataType[] TYPES = {DataType.NUMBER};
 
     private static final double MAX_VOLTAGE = 12.5, MIN_VOLTAGE = 7;
@@ -60,7 +62,7 @@ public class BatteryWidget extends Widget {
                         value += .1;
                         setValue(value);
                         if (value > 16) {
-                            value = 0;
+                            value = 10;
                         }
                     }
                 }
@@ -78,13 +80,24 @@ public class BatteryWidget extends Widget {
         value = ((Number) o).doubleValue();
         
         //changing colors
-        if (value > 12.3) {
-            color = Color.green;
-        } else if (value > 12) {
-            color = Color.orange;
-        } else {
-            color = Color.red;
+        
+        double R = 0, G = 0, B = 0;
+        double adjVal = (value-10)*30 + 60;
+	    if (adjVal <= 90) {
+            R = (255 - ((adjVal - 60) * (.2)));
+            G = ((adjVal - 60) * 4.367);
+            B = 0;
+        } else if ((adjVal > 90) && (adjVal <= 120)) {
+            R = (int) 255 - ((adjVal - 90) * ((adjVal - 90) / 3.66));
+            G = ((adjVal - 90) * ((adjVal - 90) / 14.05)) + 131;
+            B = 0;
+        } else if (adjVal > 120) {
+            R = 0;
+            G = 195;
+            B = 0;
         }
+        
+        color = new Color((int)R,(int)G,(int)B);
 
         text = (String.format("%.2f", value));
 
