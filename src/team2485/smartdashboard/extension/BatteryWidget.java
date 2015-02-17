@@ -82,8 +82,12 @@ public class BatteryWidget extends Widget {
         //changing colors
         
         double R = 0, G = 0, B = 0;
-        double adjVal = (value-10)*30 + 60;
-	    if (adjVal <= 90) {
+        double adjVal = (value-11.7)*50 + 60;
+        if (adjVal <= 60) {
+        	R = 255;
+        	G = 0;
+        	B = 0;
+        } else if ((adjVal > 60) && (adjVal <= 90)) {
             R = (255 - ((adjVal - 60) * (.2)));
             G = ((adjVal - 60) * 4.367);
             B = 0;
@@ -94,7 +98,7 @@ public class BatteryWidget extends Widget {
         } else if (adjVal > 120) {
             R = 0;
             G = 195;
-            B = 0;
+            B = 0;  
         }
         
         color = new Color((int)R,(int)G,(int)B);
