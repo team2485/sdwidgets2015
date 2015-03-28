@@ -8,6 +8,7 @@ import java.awt.Graphics;
 import edu.wpi.first.smartdashboard.gui.Widget;
 import edu.wpi.first.smartdashboard.properties.BooleanProperty;
 import edu.wpi.first.smartdashboard.properties.DoubleProperty;
+import edu.wpi.first.smartdashboard.properties.IntegerProperty;
 import edu.wpi.first.smartdashboard.properties.Property;
 import edu.wpi.first.smartdashboard.types.DataType;
 
@@ -21,12 +22,10 @@ public class NumberWidget extends Widget
 	public static final String NAME = "2485 Number";
     public static final DataType[] TYPES = {DataType.NUMBER};
     
-    private double val;
-    
     private WarlordsWindow window;
     
     private final DoubleProperty  GUISize = new DoubleProperty(this, "GUI Size", 30);
-    private final BooleanProperty Integer = new BooleanProperty(this, "Integer Toggle", false);
+    private final IntegerProperty Decimals = new IntegerProperty(this, "Decimal Places", 2);
 	private double value;
     
     @Override
@@ -52,15 +51,13 @@ public class NumberWidget extends Widget
 	
 	protected void paintComponent(final Graphics gg) {
 		double guiSize = GUISize.getValue();
-		int intVal = (int) value;
+		double adjVal  = (value* Math.pow(10,Decimals.getValue()));
+		int    tempVal = (int) adjVal;
+		adjVal  = tempVal/Math.pow(10,Decimals.getValue());
 		
 		gg.setColor(Color.YELLOW);
 		gg.setFont(new Font("BOOMBOX", Font.PLAIN, (int)guiSize));
-		if (Integer.getValue()){
-			gg.drawString("" + intVal, (int)(getWidth() - gg.getFontMetrics().getStringBounds("" + intVal, null).getWidth())/2, (int)((getHeight() + gg.getFontMetrics().getHeight()/2)/2 - guiSize*.2));
-		} else {
-			gg.drawString("" + value, (int)(getWidth() - gg.getFontMetrics().getStringBounds("" + value, null).getWidth())/2, (int)((getHeight() + gg.getFontMetrics().getHeight()/2)/2 - guiSize*.2));
-		}
+		gg.drawString("" + adjVal, (int)(getWidth() - gg.getFontMetrics().getStringBounds("" + adjVal, null).getWidth())/2, (int)((getHeight() + gg.getFontMetrics().getHeight()/2)/2 - guiSize*.2));
 		
 		gg.setColor(Color.GREEN);
 		gg.setFont(new Font("BOOMBOX", Font.PLAIN, (int)(guiSize*.5)));
