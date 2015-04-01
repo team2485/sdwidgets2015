@@ -1,15 +1,20 @@
 <xml version="1.0">
 <dashboard>
+	<widget field="Value4" type="Number" class="team2485.smartdashboard.extension.NumberWidget">
+		<location x="535" y="322"/>
+	</widget>
+	<static-widget class="javax.swing.PotCalibrator">
+		<location x="278" y="564"/>
+		<width>888</width>
+		<height>51</height>
+	</static-widget>
+	<static-widget class="edu.wpi.first.smartdashboard.gui.elements.RobotPreferences">
+		<location x="7" y="29"/>
+	</static-widget>
 	<widget field="RPM" type="Number" class="team2485.smartdashboard.extension.ToteWidget">
 		<location x="420" y="197"/>
 		<width>159</width>
 		<height>148</height>
-	</widget>
-	<widget field="Value4" type="Number" class="team2485.smartdashboard.extension.NumberWidget">
-		<location x="282" y="197"/>
-		<width>140</width>
-		<height>97</height>
-		<property name="GUI Size" value="35.0"/>
 	</widget>
 	<widget field="Clapper and Container" type="String" class="team2485.smartdashboard.extension.ClapperandContainer">
 		<location x="804" y="100"/>
