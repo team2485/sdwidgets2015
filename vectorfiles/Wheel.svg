@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="200"
+   height="200"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Wheel.svg"
+   inkscape:export-filename="C:\Users\warlords\Documents\Eclipse-Java\sdwidgets2015\src\team2485\smartdashboard\extension\res\Wheel.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <filter
+       id="filter4396"
+       inkscape:label="Glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Glow of object's own color at the edges"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur4398"
+         stdDeviation="2"
+         result="result91" />
+      <feComposite
+         id="feComposite4400"
+         in2="result91"
+         in="SourceGraphic"
+         operator="over" />
+    </filter>
+    <filter
+       id="filter4402"
+       inkscape:label="Glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Glow of object's own color at the edges"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur4404"
+         stdDeviation="5"
+         result="result91" />
+      <feComposite
+         id="feComposite4406"
+         in2="result91"
+         in="SourceGraphic"
+         operator="over" />
+    </filter>
+    <filter
+       id="filter4408"
+       inkscape:label="Glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Glow of object's own color at the edges"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur4410"
+         stdDeviation="1"
+         result="result91" />
+      <feComposite
+         id="feComposite4412"
+         in2="result91"
+         in="SourceGraphic"
+         operator="over" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="123.85323"
+     inkscape:cy="98.193016"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="716"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-852.36218)">
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.06148601;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 53.090986,952.43258 0,-76.26676 46.930014,0 46.93003,0 0,76.26676 0,76.26672 -46.93003,0 -46.930014,0 0,-76.26672 z m 87.175674,0.13426 0.12805,-69.41885 -40.37181,0 -40.371804,0 0,69.19507 c 0,38.0573 0.152746,69.35764 0.339435,69.55634 0.186689,0.1987 18.29638,0.2994 40.243759,0.2237 l 39.90433,-0.1374 0.12804,-69.41886 z"
+       id="path4392"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#000000;fill-opacity:0;stroke:#e4c025;stroke-width:5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter4396)"
+       id="rect3862"
+       width="99.008255"
+       height="149.00827"
+       x="50.495869"
+       y="877.85803"
+       transform="matrix(0.99910436,0,0,1.0633835,0.08392358,-60.111548)" />
+    <rect
+       style="fill:#ffff00;fill-opacity:0;stroke:#e4c025;stroke-width:4.02714109;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter4408)"
+       id="rect3862-1"
+       width="75.972855"
+       height="125.97286"
+       x="62.013569"
+       y="889.37573"
+       transform="matrix(0.99910436,0,0,1.0633835,0.08392358,-60.111548)" />
+    <rect
+       style="fill:#000000;fill-opacity:0;stroke:#e4c025;stroke-width:4.53299999;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter4402)"
+       id="rect4394"
+       width="20.467142"
+       height="120.46715"
+       x="29.76643"
+       y="892.6286"
+       transform="matrix(0.99910436,0,0,1.0633835,0.08392358,-60.111548)" />
+  </g>
+</svg>
